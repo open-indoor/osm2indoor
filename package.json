@@ -1,0 +1,49 @@
+{
+    "name": "osmindoor",
+    "version": "1.0.2",
+    "description": "Improve OSM indoor data for indoor rendering",
+    "main": "webpack.config.js",
+    "module": "src/index.js",
+    "jest": {
+        "verbose": true,
+        "testEnvironment": "node",
+        "moduleNameMapper": {
+            "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+            "\\.(css|less)$": "identity-obj-proxy"
+        }
+    },
+    "babel": {
+        "env": {
+            "test": {
+                "presets": [
+                    "@babel/preset-env"
+                ]
+            }
+        }
+    },
+    "scripts": {
+        "test": "jest",
+        "build": "webpack"
+    },
+    "dependencies": {
+        "@turf/turf": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/open-indoor/osmindoor.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "agpl",
+    "bugs": {
+        "url": "https://github.com/open-indoor/osmindoor/issues"
+    },
+    "homepage": "https://github.com/open-indoor/osmindoor#readme",
+    "devDependencies": {
+        "jest": "^27.4.7",
+        "lodash": "^4.17.21",
+        "resolve-cwd": "^3.0.0",
+        "webpack": "^5.66.0",
+        "webpack-cli": "^4.9.1"
+    }
+}

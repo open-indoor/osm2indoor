@@ -1,0 +1,18 @@
+services:
+  osmindoor:
+    build: .
+    working_dir: /osmindoor
+    # command: |
+    #   yarn run start
+      
+    volumes:
+    - ./src:/osmindoor/src
+    - ./dist:/osmindoor/dist
+    - ./webpack.config.js:/osmindoor/webpack.config.js
+    - ./package.json:/osmindoor/package.json
+    - ./jest.config.js:/osmindoor/jest.config.js
+    # - ./public:/osmindoor/public
+    - ./babel.config.js:/osmindoor/babel.config.js
+    - ./__mocks__:/osmindoor/__mocks__
+    # ports:
+    # - 3040:3040
